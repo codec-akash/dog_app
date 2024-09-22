@@ -69,12 +69,14 @@ class _DogListMainState extends State<DogListMain> {
                               ),
                             ],
                           ),
-                          Container(
+                          SizedBox(
                             height: 300,
                             width: 300,
                             child: CachedNetworkImage(
                               imageUrl: state.dogImage,
                               fit: BoxFit.fitWidth,
+                              placeholder: (context, val) => const Center(
+                                  child: CircularProgressIndicator()),
                             ),
                           ),
                         ],

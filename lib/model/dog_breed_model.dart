@@ -13,6 +13,8 @@ class DogBreeds {
       ));
     });
 
+    breedsList.sort((a, b) => a.breedName.compareTo(b.breedName));
+
     return DogBreeds(breeds: breedsList);
   }
 
